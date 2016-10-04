@@ -35,9 +35,10 @@ $hover-color:		 #f4b60d;
 	
 
 }
-header{
+.page_header{
 	width: 1160px;
 	margin: 0 auto;
+	padding-bottom: 268px;
 }
 .logo{
 	float: left;
@@ -180,8 +181,8 @@ input{
 
 .slogan{
 	position: absolute;
-	top: 423px;
-	left: 130px;
+	top: 234px;
+	left: 36px;
 }
 
 .articles{
@@ -265,6 +266,8 @@ main{
 	background-color: #2a2d32;
 }
 .services_header{
+	width: 1160px;
+	margin: 0 auto;
 	padding-top: 42px;
 	font-size: 24px;
 	color: #fff;
@@ -276,10 +279,14 @@ main{
 		list-style: none;
 		float: left;
 		padding: 50px 38px 0 0 ;
+		
 
 		a{
 			text-decoration: none;
 			color: #fff;
+			figure{
+				position: relative;
+			}
 			figcaption{
 				padding-top: 23px;
 				font-size: 16px;
@@ -295,6 +302,14 @@ main{
 	li:last-child{
 		padding-right: 0px;
 	}
+}
+.hover_img{
+	display: none;
+	background: url('../img/hover.png');
+	height: 260px;
+	width: 260px;
+	top: 0px;
+	position: absolute;
 }
 .block_wrapper{
 	height: 545px;
@@ -401,7 +416,7 @@ main{
 	color: rgb(138, 138, 138);
 	line-height: 1.538;
 	text-align: left;
-	width: 50%;
+	
 }
 .banners_header{
 	@extend .news_header;
@@ -455,7 +470,7 @@ main{
 }
 
 .akkordeon .active {
-display: block;
+	display: block;
 	background-color: #f4b60d;
 	color: #fff;
 
@@ -464,6 +479,8 @@ display: block;
 
 	// ----- companies ------
 	.companies{
+		width: 1160px;
+		margin: 0 auto;
 		padding: 85px 94px 156px;
 		position: relative;
 	}
@@ -508,21 +525,24 @@ display: block;
 		margin-right: 0;
 		background: url('../img/companies.png') -560px 0 ;
 	}
-	.links{
-		height: 267px;
-		padding-top: 58px;
-		padding-left: 53px;
+	.links_wrapper{
+		height: 325px;
 		background-color: #2a2d32;
+	}
+
+	.links{
+		width: 1160px;
+		margin: 0 auto;
+		padding-top: 58px;
 		display: flex;
 		
 		h3{
-			padding-left: 38px;
 			font-size: 16px;
 			color: #fff;
 		}
 		ul{
-			padding-left: 38px;
 			width: 265px;
+			padding-right: 37px;
 			font-size: 16px;
 			color: #fff;
 
@@ -544,6 +564,10 @@ display: block;
 					color: #248cec;
 				}
 			}
+			li:last-child{
+				border-bottom: none;
+				padding-bottom: 20px;
+			}
 			.first_li{
 				padding-top: 30px;
 			}
@@ -551,20 +575,37 @@ display: block;
 	}
 
 	footer{
-		display: flex;
 		height: 60px;
-		    padding: 21px 97px;
 		background-color: #35383c;
-		p{
-padding-left: 9px;
-padding-right: 36px;
-  font-size: 12px;
-  font-family: "Arial";
-  color: rgba(255, 255, 255, 0.2);
-  line-height: 1.667;
-  text-align: left;
-  
+	}
+	.footer_content{
+		width: 1160px;
+		margin: 0 auto;
+		display: flex;
+		padding: 21px 97px;
+		a{
+			display: flex;
+			text-decoration: none;
+			color: rgba(255, 255, 255, 0.2);
 		}
+		
+
+
+		p{
+			padding-left: 9px;
+			padding-right: 36px;
+			font-size: 12px;
+			font-family: "Arial";
+			color: rgba(255, 255, 255, 0.2);
+			line-height: 1.667;
+			text-align: left;
+			
+			
+		}
+		p:hover{
+			color: #fff;
+		}
+
 	}
 	.location{
 		display: block;
@@ -579,19 +620,23 @@ padding-right: 36px;
 	.letter{
 		@extend .location;
 		width: 20px;
-				background: url('../img/icons.png') -28px 0 ;
+		background: url('../img/icons.png') -28px 0 ;
 
 	}
-	.TM{
-		    padding-left: 384px;
-    padding-right: 0px;
-}
-#square{
-	opacity: 0;
-}
+	.footer_content .TM{
+		padding-left: 384px;
+		padding-right: 0px;
+		
+	}
+	.footer_content .TM:hover{
+		color: rgba(255, 255, 255, 0.2);
+	}
+	#square{
+		opacity: 0;
+	}
 	.slick-active #square{
 		position: absolute;
-    bottom: 5px;
+		bottom: 5px;
 		display: block;
 		opacity: 1;
 		width: 10px;

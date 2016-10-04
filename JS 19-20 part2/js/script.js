@@ -11,13 +11,13 @@
 
 var skillsArr = (_.uniq(_.flattenDeep(_.map(arr, "skills")))).sort(function sortFunction(a, b){
   if( a.toLowerCase() <  b.toLowerCase())
-     return -1 // Или любое число, меньшее нуля
+     return -1 ;// Или любое число, меньшее нуля
    if(a.toLowerCase()> b.toLowerCase() )
-     return 1  // Или любое число, большее нуля
+     return 1 ; // Или любое число, большее нуля
   // в случае а = b вернуть 0
   return 0
 });
-console.log('1. Массив скиллов:  ',skillsArr)
+console.log('1. Массив скиллов:  ',skillsArr);
 
 
 //  2. Массив имен (поле name) людей, отсортированных в зависимости от 
@@ -25,7 +25,7 @@ console.log('1. Массив скиллов:  ',skillsArr)
 var friends = _.sortBy(arr, "friends.length");
 var nameArr = (_.map(friends, "name"));
 
-console.log('2. Массив имен: ', nameArr)
+console.log('2. Массив имен: ', nameArr);
 
 //  3. Массив всех друзей всех пользователей, не должно быть повторяющихся людей
 
@@ -35,8 +35,8 @@ for (var i = 0; i < friendsArr.length; i++) {
   newFriendsArr[i] = _.nth(friendsArr, i).name;
 }
 
-var usersFriends = _.uniq(newFriendsArr)
-console.log('3. Массив друзей:  ', usersFriends)
+var usersFriends = _.uniq(newFriendsArr);
+console.log('3. Массив друзей:  ', usersFriends);
 
 })
 

@@ -17,9 +17,10 @@
   font: 26px "ubuntu", Arial, sans-serif;
   margin: 20px auto; }
 
-header {
+.page_header {
   width: 1160px;
-  margin: 0 auto; }
+  margin: 0 auto;
+  padding-bottom: 268px; }
 
 .logo {
   float: left;
@@ -143,8 +144,8 @@ input {
 
 .slogan {
   position: absolute;
-  top: 423px;
-  left: 130px; }
+  top: 234px;
+  left: 36px; }
 
 .articles {
   position: relative;
@@ -208,6 +209,8 @@ main {
   background-color: #2a2d32; }
 
 .services_header {
+  width: 1160px;
+  margin: 0 auto;
   padding-top: 42px;
   font-size: 24px;
   color: #fff; }
@@ -222,6 +225,8 @@ main {
     .services_list .services_item a {
       text-decoration: none;
       color: #fff; }
+      .services_list .services_item a figure {
+        position: relative; }
       .services_list .services_item a figcaption {
         padding-top: 23px;
         font-size: 16px;
@@ -231,6 +236,14 @@ main {
         color: #f4b60d; }
   .services_list li:last-child {
     padding-right: 0px; }
+
+.hover_img {
+  display: none;
+  background: url("../img/hover.png");
+  height: 260px;
+  width: 260px;
+  top: 0px;
+  position: absolute; }
 
 .block_wrapper {
   height: 545px;
@@ -325,8 +338,7 @@ main {
   font-family: "Arial";
   color: #8a8a8a;
   line-height: 1.538;
-  text-align: left;
-  width: 50%; }
+  text-align: left; }
 
 .banners_header {
   padding-left: 20px; }
@@ -370,6 +382,8 @@ main {
   color: #fff; }
 
 .companies {
+  width: 1160px;
+  margin: 0 auto;
   padding: 85px 94px 156px;
   position: relative; }
 
@@ -410,19 +424,21 @@ main {
   margin-right: 0;
   background: url("../img/companies.png") -560px 0; }
 
+.links_wrapper {
+  height: 325px;
+  background-color: #2a2d32; }
+
 .links {
-  height: 267px;
+  width: 1160px;
+  margin: 0 auto;
   padding-top: 58px;
-  padding-left: 53px;
-  background-color: #2a2d32;
   display: flex; }
   .links h3 {
-    padding-left: 38px;
     font-size: 16px;
     color: #fff; }
   .links ul {
-    padding-left: 38px;
     width: 265px;
+    padding-right: 37px;
     font-size: 16px;
     color: #fff; }
     .links ul li {
@@ -436,15 +452,26 @@ main {
         color: #828385; }
       .links ul li a:hover {
         color: #248cec; }
+    .links ul li:last-child {
+      border-bottom: none;
+      padding-bottom: 20px; }
     .links ul .first_li {
       padding-top: 30px; }
 
 footer {
-  display: flex;
   height: 60px;
-  padding: 21px 97px;
   background-color: #35383c; }
-  footer p {
+
+.footer_content {
+  width: 1160px;
+  margin: 0 auto;
+  display: flex;
+  padding: 21px 97px; }
+  .footer_content a {
+    display: flex;
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.2); }
+  .footer_content p {
     padding-left: 9px;
     padding-right: 36px;
     font-size: 12px;
@@ -452,6 +479,8 @@ footer {
     color: rgba(255, 255, 255, 0.2);
     line-height: 1.667;
     text-align: left; }
+  .footer_content p:hover {
+    color: #fff; }
 
 .location, .phone, .letter {
   display: block;
@@ -466,9 +495,12 @@ footer {
   width: 20px;
   background: url("../img/icons.png") -28px 0; }
 
-.TM {
+.footer_content .TM {
   padding-left: 384px;
   padding-right: 0px; }
+
+.footer_content .TM:hover {
+  color: rgba(255, 255, 255, 0.2); }
 
 #square {
   opacity: 0; }

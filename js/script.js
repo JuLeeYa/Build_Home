@@ -13,7 +13,7 @@ $(document).ready(function(){
   $(' li .akkordeon-header').on('click', function(){
       
 
-if(!$(this).hasClass('active')){  //если "кликнутый" пункт неактивный:
+      if(!$(this).hasClass('active')){  //если "кликнутый" пункт неактивный:
           $('li .akkordeon-header').removeClass('active').next('div').slideUp(); //делаем неактивными все пункты и скрываем все блоки
           $('.akkordeon-header > span').html('+')
           $(this).addClass('active'); //активируем "кликнутый" пункт
@@ -32,6 +32,18 @@ if(!$(this).hasClass('active')){  //если "кликнутый" пункт н�
       });
 
 
-     
+
+
+$('.services_img').mouseenter(function(){
+
+  $(this).children('.hover_img').css('display', 'block');
+    
+});
+$('.services_img').mouseleave(function(){
+  
+     $(this).children('.hover_img').css('display', 'none');
+    
+})
+
     });
 
